@@ -7,7 +7,7 @@ description: Plugin engine
 load: STARTUP
 folia-supported: true
 authors:
-  - NightExpress
+  - uwuufo
 libraries:
   - com.zaxxer:HikariCP:6.3.2
   - it.unimi.dsi:fastutil-core:8.5.16

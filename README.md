@@ -2,7 +2,7 @@
 
 **NightCore** is a lightweight library with a wide range of utilities and tools for faster and more efficient plugin development.
 
-This library is required for all [NightExpress](https://www.spigotmc.org/resources/authors/81588/)'s plugins.
+This library is maintained by [uwuufo](https://github.com/uwuufo).
 
 ## Features
 
@@ -65,4 +65,4 @@ Plugins powered by **NightCore**.
 - [SunLight](https://www.spigotmc.org/resources/67733/)
 
 ## Donate
-If you like my work or enjoy using my plugins, feel free to [Buy me a coffee](https://ko-fi.com/nightexpress) :) Thank you! 🧡
+If you like this project, consider starring the [GitHub repository](https://github.com/nulli0n/nightcore-spigot). Thank you.
