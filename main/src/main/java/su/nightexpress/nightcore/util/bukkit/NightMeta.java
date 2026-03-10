@@ -360,7 +360,7 @@ public class NightMeta implements Writeable {
         if (meta == null) return;
 
         for (String name : componentNames) {
-            ItemFlag flag = Strings.getEnum(name, ItemFlag.class).orElse(null);
+            ItemFlag flag = StringUtil.getEnum(name, ItemFlag.class).orElse(null);
             if (flag == null) continue;
 
             meta.addItemFlags(flag);
