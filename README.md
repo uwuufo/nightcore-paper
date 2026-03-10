@@ -8,7 +8,7 @@ This library is required for all [NightExpress](https://www.spigotmc.org/resourc
 
 ✅ What exactly is included in these 1.4 MB:
 - **Pure original code** written by a human, not by AI.
-- **Server Bridge**, providing simultaneous support for **Spigot**, **Paper** and **Folia**.
+- **Server Bridge**, providing simultaneous support for **Paper** and **Folia**.
 - **Economy Bridge**, providing simultaneous support for economies/currencies from multiple plugins.
 - **Item Bridge**, providing simultaneous support for custom items from multiple plugins.
 - **Permissions Bridge**, providing support for various permission plugins.
@@ -43,10 +43,10 @@ This library is required for all [NightExpress](https://www.spigotmc.org/resourc
 - **No advertisements**.
 
 ## Links
-- [Modrinth](https://modrinth.com/plugin/nightcore)
-- [Hangar](https://hangar.papermc.io/NightExpress/nightcore)
-- [Documentation](https://nightexpressdev.com/nightcore/)
-- [Developer API](https://nightexpressdev.com/nightcore/developer-api/)
+- [GitHub Repository](https://github.com/nulli0n/nightcore-spigot)
+- [Issues](https://github.com/nulli0n/nightcore-spigot/issues)
+- [Releases](https://github.com/nulli0n/nightcore-spigot/releases)
+- [Wiki](https://github.com/nulli0n/nightcore-spigot/wiki)
 
 ## Plugins
 Plugins powered by **NightCore**.

@@ -134,12 +134,6 @@
         </dependency>
 
         <dependency>
-            <groupId>su.nightexpress.nightcore</groupId>
-            <artifactId>spigot</artifactId>
-            <version>2.14.0</version>
-        </dependency>
-
-        <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.21.8-R0.1-SNAPSHOT</version>

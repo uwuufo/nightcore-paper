@@ -19,6 +19,7 @@ import su.nightexpress.nightcore.config.PluginDetails;
 import su.nightexpress.nightcore.language.LangManager;
 import su.nightexpress.nightcore.locale.LangContainer;
 import su.nightexpress.nightcore.locale.LangElement;
+import su.nightexpress.nightcore.util.Version;
 import su.nightexpress.nightcore.ui.inventory.MenuRegistry;
 import su.nightexpress.nightcore.util.wrapper.UniTask;
 
@@ -140,31 +141,55 @@ public interface NightCorePlugin extends Plugin {
 
     @Deprecated
     default void runTask(@NotNull Consumer<BukkitTask> consumer) {
+        if (Version.isFolia()) {
+            this.scheduler().runTask(() -> consumer.accept(null));
+            return;
+        }
         this.getScheduler().runTask(this, consumer);
     }
 
     @Deprecated
     default void runTaskAsync(@NotNull Consumer<BukkitTask> consumer) {
+        if (Version.isFolia()) {
+            this.scheduler().runTaskAsync(() -> consumer.accept(null));
+            return;
+        }
         this.getScheduler().runTaskAsynchronously(this, consumer);
     }
 
     @Deprecated
     default void runTaskLater(@NotNull Consumer<BukkitTask> consumer, long delay) {
+        if (Version.isFolia()) {
+            this.scheduler().runTaskLater(() -> consumer.accept(null), delay);
+            return;
+        }
         this.getScheduler().runTaskLater(this, consumer, delay);
     }
 
     @Deprecated
     default void runTaskLaterAsync(@NotNull Consumer<BukkitTask> consumer, long delay) {
+        if (Version.isFolia()) {
+            this.scheduler().runTaskLaterAsync(() -> consumer.accept(null), delay);
+            return;
+        }
         this.getScheduler().runTaskLaterAsynchronously(this, consumer, delay);
     }
 
     @Deprecated
     default void runTaskTimer(@NotNull Consumer<BukkitTask> consumer, long delay, long interval) {
+        if (Version.isFolia()) {
+            this.scheduler().runTaskTimer(() -> consumer.accept(null), delay, interval);
+            return;
+        }
         this.getScheduler().runTaskTimer(this, consumer, delay, interval);
     }
 
     @Deprecated
     default void runTaskTimerAsync(@NotNull Consumer<BukkitTask> consumer, long delay, long interval) {
+        if (Version.isFolia()) {
+            this.scheduler().runTaskTimerAsync(() -> consumer.accept(null), delay, interval);
+            return;
+        }
         this.getScheduler().runTaskTimerAsynchronously(this, consumer, delay, interval);
     }
 

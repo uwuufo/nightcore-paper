@@ -7,7 +7,6 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import su.nightexpress.nightcore.bridge.chat.UniversalChatEventHandler;
 import su.nightexpress.nightcore.bridge.paper.PaperBridge;
-import su.nightexpress.nightcore.bridge.spigot.SpigotBridge;
 import su.nightexpress.nightcore.chat.ChatManager;
 import su.nightexpress.nightcore.commands.command.NightCommand;
 import su.nightexpress.nightcore.config.PluginDetails;
@@ -79,8 +78,13 @@ public class NightCore extends NightPlugin {
         core = this;
 
         Version version = Version.detect();
+        if (!Version.isPaper()) {
+            this.error("This build supports only Paper and Folia servers.");
+            return false;
+        }
+
         if (!version.isDropped()) {
-            Software.INSTANCE.load(Version.isPaper() ? new PaperBridge() : new SpigotBridge());
+            Software.INSTANCE.load(new PaperBridge());
             this.info("Server version detected as " + version.getLocalized() + ". Using " + Software.get().getName() + ".");
 
             if (!testNbt()) {
